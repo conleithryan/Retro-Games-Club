@@ -1,0 +1,438 @@
+/* i used www.stackoverflow.com for guides on how to do some tricks and structure */
+
+/* base styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Press Start 2P", system-ui, -apple-system, monospace;
+    background-color: #111111;
+    color: #f0f0f0;
+    line-height: 1.5;
+}
+
+/* header & navigation */
+.site-header {
+    background-color: #222222;
+    border-bottom: 4px solid #00ffcc;
+    text-align: center;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+
+.main-nav {
+    background-color: #222;
+    border-bottom: 3px solid #00ffcc;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 0 auto;
+    padding: 12px 16px;
+    list-style: none;
+    max-width: 1200px;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.main-nav a:hover, .main-nav a:focus, .main-nav a.active {
+    background-color: #00ffcc;
+    color: #111111;
+    outline: none;
+}
+
+/* main layout & containers */
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+}
+
+/* intro and content box */
+.intro, .form, .events-container {
+    margin: 34px auto 32px;
+    padding: 24px 16px;
+    max-width: 1100px;
+    background-color: #1b1b1b;
+    border: 2px solid #00ffcc;
+    border-radius: 12px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+    border-bottom: solid #00ffcc;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #00ffcc;
+}
+
+/* home page */
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* stack columns on mobile */
+@media (max-width: 800px) {
+    .columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.col {
+    background-color: #1b1b1b;
+    padding: 16px;
+    border-radius: 8px;
+    border: 2px solid #00ffcc;
+}
+
+/* featured column */
+.featured-col {
+    border: 4px solid #ff00ff;
+}
+
+.featured-col h2 {
+    color: #ff00ff;
+    border-bottom-color: #ff00ff;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Buttons */
+.button, .signup-btn {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+}
+
+.button:hover, .signup-btn:hover {
+    background-color: #00ffcc;
+    color: #111111;
+}
+
+/* events page */
+.featured-event {
+    background-color: #220022;
+    border: 4px solid #ff00ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.featured-event h2 {
+    color: #ff00ff;
+    border-bottom: 2px solid #ff00ff;
+}
+
+.highlight-time, .highlight-location {
+    color: #00ffcc;
+    margin: 10px 0;
+    font-size: 0.8rem;
+}
+
+.neon-divider {
+    border: 0;
+    height: 2px;
+    background: #00ffcc;
+    margin: 40px 0;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.retro-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.7rem;
+    margin: 0 auto;
+}
+
+.retro-table th, .retro-table td {
+    border: 2px solid #00ffcc;
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.retro-table th {
+    background-color: #00ffcc;
+    color: #111111;
+    text-transform: uppercase;
+}
+
+/* form styles */
+form {
+    font-size: 10px;
+    text-align: left;
+}
+
+fieldset {
+    margin: 10px 0 20px 0;
+    border: 2px solid #00ffcc;
+    background-color: #1b1b1b;
+    padding: 15px;
+}
+
+legend {
+    color: #00ffcc;
+    padding: 0 10px;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+/* inputs */
+input[type="text"], input[type="email"], input[type="date"], select, textarea {
+    background-color: #000000;
+    color: #00ff00; /* Retro Green */
+    border: 1px solid #00ffcc;
+    font-family: inherit;
+    font-size: 0.8rem;
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #ff00ff;
+}
+
+/* checkbox grid */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.item {
+    width: 110px;
+    text-align: center;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+.item:hover {
+    border-color: #00ffcc;
+}
+
+.item img {
+    display: block;
+    width: 60px;
+    height: auto;
+    margin: 0 auto 5px auto;
+}
+
+.item input {
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.item label {
+    font-size: 0.6rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Submit Buttons */
+.submit, .reset {
+    font-family: inherit;
+    font-size: 0.8rem;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #222;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.submit:hover { border-color: green; color: green; }
+.reset:hover { border-color: red; color: red; }
+
+.form-section-title {
+    margin-top: 20px;
+}
+
+.benefits-list {
+    text-align: left;
+    padding-left: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.benefits-list li {
+    margin-bottom: 15px;
+}
+
+.benefits-list li {
+    margin-bottom: 15px;
+}
+
+.related-websites-list {
+    list-style: none;
+    padding: 0;
+}
+
+.related-websites-list li {
+    margin-bottom: 10px;
+}
+
+.related-websites-list li a {
+    color: #00ffcc;
+}
+
+.contact-address {
+    font-style: normal;
+    margin-top: 20px;
+}
+
+.contact-address a {
+    color: #00ffcc;
+}
+
+.social-media-links {
+    margin-top: 30px;
+}
+
+.social-media-list {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media-list li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.form-submit-buttons {
+    text-align: center;
+}
+
+/* footer */
+footer {
+    background-color: #222222;
+    border-top: 2px solid #00ffcc;
+    text-align: center;
+    padding: 16px;
+    color: #cccccc;
+    font-size: 0.75rem;
+}
+
+footer a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #00ffcc;
+}
+
+/* contacts and about page */
+
+/* google maps */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+    height: 0;
+    border: 2px solid #00ffcc;
+    border-radius: 8px;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
+/* faq */
+.faq-item {
+    background-color: #222;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: #00ffcc;
+    outline: none;
+}
+
+.faq-item p {
+    margin-top: 10px;
+    font-size: 0.7rem;
+    line-height: 1.4;
+    color: #ccc;
+    padding-left: 10px;
+}
+
+.faq-item[open] summary {
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}

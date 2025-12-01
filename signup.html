@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+    <meta charset="utf-8">
+    <title>Sign Up - MTU RGC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Join the Retro Games Club.">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">   
+            <h1>Retro Games Club at MTU</h1>
+            <p>Step back into the golden age of gaming!</p>            
+        </div>
+        
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signup.html" class="active">Sign Up</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">    
+        <form class="form" method="post" action="https://webdevcit.com/displayvalues.php" target="_blank" enctype="multipart/form-data">
+            <h2>Sign Up Form</h2>
+            
+            <fieldset>
+                <legend>Personal Information</legend>
+                <ul>
+                    <li>
+                        <label for="first-name">First Name:</label><br>
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    </li>
+                    <li>
+                        <label for="last-name">Last Name:</label><br>
+                        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                    </li>
+                    <li>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Email" required>  
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>MTU Details</legend>
+                <ul>
+                    <li>
+                        <label for="date">Date Started in MTU:</label><br>
+                        <input type="date" id="date" name="date" required>
+                    </li>
+                    <li>
+                        <label for="department">Department of Study:</label><br>
+                        <select class="department" name="department" id="department">
+                            <option disabled selected>Please select</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="computer_science">Computer Science</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="business">Business</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="art_design">Art & Design</option>
+                            <option value="music">Music</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="campus">Campus:</label><br>
+                        <select class="campus" name="campus" id="campus">
+                            <option disabled selected>Please select</option>
+                            <option value="bishopstown">Bishopstown</option>
+                            <option value="crawford">Crawford College of Art & Design</option>
+                            <option value="music">Cork School of Music</option>
+                            <option value="nmci">National Maritime College of Ireland</option>
+                        </select>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Club Preferences</legend>
+
+                <ul>
+                    <li>
+                        <label for="favorite-game">What's your Favorite Retro Game?</label><br>
+                        <input type="text" name="favorite-game" placeholder="e.g. Street Fighter II" id="favorite-game">
+                    </li>
+                </ul>
+
+                <p>Check the games you like:</p>
+                <div class="grid">
+                    <div class="item">
+                        <input type="checkbox" name="game-interests" value="tetris" id="cb1">
+                        <label for="cb1">
+                            <!-- Source: https://imgs.search.brave.com/S9eeaddDIthiG0QRjGPqtX51yfl_4EtkBs1LaOSzbo8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzhjL2Fi/Lzk4LzhjYWI5ODRm/MmM0YWFlM2U5MjRl/OWEzZjg1ODQwNWYw/LmpwZw -->
+                            <img src="images/tetris.png" alt="Tetris"><br>Tetris
+                        </label>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" name="game-interests" value="mario" id="cb2">
+                        <label for="cb2">
+                            <!-- Source: https://imgs.search.brave.com/k5PomfKd6SB_K-YLYaow55WnmprdVRaP0eKFGNDtyqE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qll6SXpaVFJq/WXpRdFltVmhaaTAw/TXpFeUxUazVZMlV0/WXpZeFpqYzVabU0y/TldFNVhrRXlYa0Zx/Y0djQC5qcGc -->
+                            <img src="images/super-mario-world.png" alt="Mario"><br>Mario
+                        </label>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" name="game-interests" value="gta-iv" id="cb3">
+                        <label for="cb3">
+                            <!-- Source: https://imgs.search.brave.com/lQlbzoVbZy9au_FPggNtL1jlhISQcZDyXooHZSWm6l0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/aWdyYW5kdGhlZnRh/dXRvLmNvbS9jb250/ZW50L2ltYWdlcy9s/Zy8zNjE4LWd0YWl2/LWd0YS1pdi1jb3Zl/ci1hcnQuanBnP2V0/YWc9NTE1YjAwMGI -->
+                            <img src="images/gta-iv.png" alt="Gta"><br>GTA IV
+                        </label>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" name="game-interests" value="sonic" id="cb4">
+                        <label for="cb4">
+                            <!-- Source: https://imgs.search.brave.com/yhC6BEn4gbDkbdsJRAVUsXCk-9TqQdoDy3ORKVlW9qU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/MC8wYy9Tb25pY18y/X1VTX0NvdmVyLmpw/Zy8yNTBweC1Tb25p/Y18yX1VTX0NvdmVy/LmpwZw -->
+                            <img src="images/sonic-2.png" alt="Sonic"><br>Sonic
+                        </label>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" name="game-interests" value="pacman" id="cb5">
+                        <label for="cb5">
+                            <!-- Source: https://imgs.search.brave.com/mWmIwcIWpMJ1_lWy2lhYu7trp6UaVEzXCAodr2uglcs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzg1Lzcx/L2RlLzg1NzFkZTgz/ODZhZDJjOWY1YjRk/ZmE5MTAwNTQyYTc4/LmpwZw -->
+                            <img src="images/pacman.png" alt="Pacman"><br>Pacman
+                        </label>
+                    </div>
+                    </div>
+
+                <p class="form-section-title">Which events interest you?</p>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="evt1" name="event-interest" value="marioKart">
+                        <label for="evt1">Mario Kart Tournament</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="evt2" name="event-interest" value="pacman">
+                        <label for="evt2">Pac-Man Challenge</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="evt3" name="event-interest" value="doom">
+                        <label for="evt3">DOOM LAN Party</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="evt4" name="event-interest" value="dnd">
+                        <label for="evt4">D&D Night</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="evt5" name="event-interest" value="redrover">
+                        <label for="evt5">Red Rover</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>About You</legend>
+                <ul>
+                    <li>
+                        <label for="why-join">Why do you want to join the club?</label><br>
+                        <textarea name="why-join" id="why-join" rows="4" placeholder="Tell us about yourself..."></textarea>
+                    </li>
+                    <li>
+                        <label>Membership Card Preference:</label><br>
+                        <input type="radio" name="card-type" value="virtual" id="virtual" checked>
+                        <label for="virtual">Virtual Card</label><br>
+                        
+                        <input type="radio" name="card-type" value="printed" id="printed">
+                        <label for="printed">Printed Card</label>
+                    </li>
+                    <li>
+                        <label for="profile-photo">Upload Photo for Membership Card:</label><br>
+                        <input type="file" id="profile-photo" name="profile-photo" accept="image/png, image/jpeg">
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset>
+                <legend>Final Check</legend>
+                <ul>
+                    <li>
+                        <p>Have you attended a club event before?</p>
+                        <input type="radio" name="previous-events" value="yes" id="yes">
+                        <label for="yes">Yes</label>
+                        <input type="radio" name="previous-events" value="no" id="no">
+                        <label for="no">No</label>
+                    </li>
+                </ul>
+            </fieldset>                        
+            
+            <div class="form-submit-buttons">
+                <button class="submit" type="submit">Submit Form</button>
+                <button class="reset" type="reset">Cancel</button>
+            </div>
+        </form>
+    </main>
+    
+    <footer>
+        <address>
+            <a href="mailto:info@example.com">retrogamesclub@mtu.ie</a>
+        </address>        
+        <p><small>&#169; 2025 MTU Retro Games Club</small></p>
+    </footer>
+</body>
+</html>
