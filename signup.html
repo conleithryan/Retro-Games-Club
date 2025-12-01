@@ -30,7 +30,7 @@
     </header>
 
     <main class="main">    
-        <form class="form" method="post" action="https://webdevcit.com/displayvalues.php" target="_blank" enctype="multipart/form-data">
+        <form class="form" method="post" action="https://webdevcit.com/displayvalues.php">
             <h2>Sign Up Form</h2>
             
             <fieldset>
@@ -97,35 +97,35 @@
                 <p>Check the games you like:</p>
                 <div class="grid">
                     <div class="item">
-                        <input type="checkbox" name="game-interests" value="tetris" id="cb1">
+                        <input type="checkbox" name="game-interests[]" value="tetris" id="cb1">
                         <label for="cb1">
                             <!-- Source: https://imgs.search.brave.com/S9eeaddDIthiG0QRjGPqtX51yfl_4EtkBs1LaOSzbo8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzhjL2Fi/Lzk4LzhjYWI5ODRm/MmM0YWFlM2U5MjRl/OWEzZjg1ODQwNWYw/LmpwZw -->
                             <img src="images/tetris.png" alt="Tetris"><br>Tetris
                         </label>
                     </div>
                     <div class="item">
-                        <input type="checkbox" name="game-interests" value="mario" id="cb2">
+                        <input type="checkbox" name="game-interests[]" value="mario" id="cb2">
                         <label for="cb2">
                             <!-- Source: https://imgs.search.brave.com/k5PomfKd6SB_K-YLYaow55WnmprdVRaP0eKFGNDtyqE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL00v/TVY1Qll6SXpaVFJq/WXpRdFltVmhaaTAw/TXpFeUxUazVZMlV0/WXpZeFpqYzVabU0y/TldFNVhrRXlYa0Zx/Y0djQC5qcGc -->
                             <img src="images/super-mario-world.png" alt="Mario"><br>Mario
                         </label>
                     </div>
                     <div class="item">
-                        <input type="checkbox" name="game-interests" value="gta-iv" id="cb3">
+                        <input type="checkbox" name="game-interests[]" value="gta-iv" id="cb3">
                         <label for="cb3">
                             <!-- Source: https://imgs.search.brave.com/lQlbzoVbZy9au_FPggNtL1jlhISQcZDyXooHZSWm6l0/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/aWdyYW5kdGhlZnRh/dXRvLmNvbS9jb250/ZW50L2ltYWdlcy9s/Zy8zNjE4LWd0YWl2/LWd0YS1pdi1jb3Zl/ci1hcnQuanBnP2V0/YWc9NTE1YjAwMGI -->
                             <img src="images/gta-iv.png" alt="Gta"><br>GTA IV
                         </label>
                     </div>
                     <div class="item">
-                        <input type="checkbox" name="game-interests" value="sonic" id="cb4">
+                        <input type="checkbox" name="game-interests[]" value="sonic" id="cb4">
                         <label for="cb4">
                             <!-- Source: https://imgs.search.brave.com/yhC6BEn4gbDkbdsJRAVUsXCk-9TqQdoDy3ORKVlW9qU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvZW4vdGh1bWIv/MC8wYy9Tb25pY18y/X1VTX0NvdmVyLmpw/Zy8yNTBweC1Tb25p/Y18yX1VTX0NvdmVy/LmpwZw -->
                             <img src="images/sonic-2.png" alt="Sonic"><br>Sonic
                         </label>
                     </div>
                     <div class="item">
-                        <input type="checkbox" name="game-interests" value="pacman" id="cb5">
+                        <input type="checkbox" name="game-interests[]" value="pacman" id="cb5">
                         <label for="cb5">
                             <!-- Source: https://imgs.search.brave.com/mWmIwcIWpMJ1_lWy2lhYu7trp6UaVEzXCAodr2uglcs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzg1Lzcx/L2RlLzg1NzFkZTgz/ODZhZDJjOWY1YjRk/ZmE5MTAwNTQyYTc4/LmpwZw -->
                             <img src="images/pacman.png" alt="Pacman"><br>Pacman
@@ -136,23 +136,23 @@
                 <p class="form-section-title">Which events interest you?</p>
                 <ul>
                     <li>
-                        <input type="checkbox" id="evt1" name="event-interest" value="marioKart">
+                        <input type="checkbox" id="evt1" name="event-interest[]" value="marioKart">
                         <label for="evt1">Mario Kart Tournament</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="evt2" name="event-interest" value="pacman">
+                        <input type="checkbox" id="evt2" name="event-interest[]" value="pacman">
                         <label for="evt2">Pac-Man Challenge</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="evt3" name="event-interest" value="doom">
+                        <input type="checkbox" id="evt3" name="event-interest[]" value="doom">
                         <label for="evt3">DOOM LAN Party</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="evt4" name="event-interest" value="dnd">
+                        <input type="checkbox" id="evt4" name="event-interest[]" value="dnd">
                         <label for="evt4">D&D Night</label>
                     </li>
                     <li>
-                        <input type="checkbox" id="evt5" name="event-interest" value="redrover">
+                        <input type="checkbox" id="evt5" name="event-interest[]" value="redrover">
                         <label for="evt5">Red Rover</label>
                     </li>
                 </ul>
@@ -175,7 +175,7 @@
                     </li>
                     <li>
                         <label for="profile-photo">Upload Photo for Membership Card:</label><br>
-                        <input type="file" id="profile-photo" name="profile-photo" accept="image/png, image/jpeg">
+                        <input type="file" id="profile-photo" name="profile-photo">
                     </li>
                 </ul>
             </fieldset>
